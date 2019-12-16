@@ -1,6 +1,8 @@
 package com.example.pickmeup
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pickmeup.utils.Utils
@@ -8,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_login.*
 
 
 class Login : AppCompatActivity() {
-// this is added
+// another change
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -27,9 +29,22 @@ class Login : AppCompatActivity() {
     private fun initActions() {
         forgotButton.setOnClickListener {Toast.makeText(applicationContext, "Clicked Forgot Password", Toast.LENGTH_SHORT).show() }
 
-        createTextView.setOnClickListener { Toast.makeText(applicationContext, "Clicked Create Account", Toast.LENGTH_SHORT).show() }
+        createTextView.setOnClickListener {
 
-        loginButton.setOnClickListener {  Toast.makeText(applicationContext, "Clicked Login", Toast.LENGTH_SHORT).show() }
+            val intent =Intent(this,SignUp::class.java)
+            startActivity(intent)
+            Toast.makeText(applicationContext, "Clicked Create Account", Toast.LENGTH_SHORT).show() }
+
+        loginButton.setOnClickListener {
+
+            val intent = Intent(this,fragment_all::class.java)
+            startActivity(intent)
+//            Toast.makeText(applicationContext, "Clicked Login", Toast.LENGTH_SHORT).show()
+        }
+
+    }
+
+    fun creatAccount(view: View) {
 
     }
     //endregion

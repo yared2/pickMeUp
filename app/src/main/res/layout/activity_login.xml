@@ -226,6 +226,9 @@
                         android:gravity="start" />
 
                     <TextView
+                        android:linksClickable="true"
+                        android:autoLink="all"
+                        android:onClick="creatAccount"
                         android:id="@+id/createTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
