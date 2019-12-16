@@ -7,6 +7,8 @@
     android:background="@color/md_grey_300">
 
     <androidx.core.widget.NestedScrollView
+        android:backgroundTint="@android:color/holo_red_light"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
@@ -78,20 +80,22 @@
 
 
                 <EditText
+                    android:backgroundTint="@android:color/holo_red_light"
+                    android:textColor="@android:color/white"
+
                     android:id="@+id/editFirstname"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="8dp"
-                    android:background="@null"
+
                     android:ems="10"
                     android:fontFamily="@font/roboto"
                     android:gravity="start"
                     android:hint="First Name"
                     android:inputType="textPersonName"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/md_white_1000"
                     android:textColorHint="@color/md_white_1000"
                     android:textSize="@dimen/font_body_size"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -99,13 +103,15 @@
                     app:layout_constraintTop_toTopOf="@+id/view58" />
 
                 <EditText
+                    android:backgroundTint="@android:color/holo_red_light"
+
                     android:id="@+id/editLastName"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="40dp"
                     android:layout_marginEnd="8dp"
-                    android:background="@null"
+
                     android:ems="10"
                     android:fontFamily="@font/roboto"
                     android:gravity="start"
@@ -122,13 +128,15 @@
 
 
                 <EditText
+                    android:backgroundTint="@android:color/holo_red_light"
+
                     android:id="@+id/editTel"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="40dp"
                     android:layout_marginEnd="8dp"
-                    android:background="@null"
+
                     android:ems="10"
                     android:fontFamily="@font/roboto"
                     android:gravity="start"
@@ -145,13 +153,15 @@
 
 
                 <EditText
+                    android:backgroundTint="@android:color/holo_red_light"
+
                     android:id="@+id/editEmail"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="40dp"
                     android:layout_marginEnd="8dp"
-                    android:background="@null"
+
                     android:ems="10"
                     android:fontFamily="@font/roboto"
                     android:gravity="start"
@@ -168,13 +178,15 @@
 
 
                 <EditText
+                    android:backgroundTint="@android:color/holo_red_light"
+
                     android:id="@+id/editPassword"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="40dp"
                     android:layout_marginEnd="8dp"
-                    android:background="@null"
+
                     android:ems="10"
                     android:fontFamily="@font/roboto"
                     android:gravity="start"

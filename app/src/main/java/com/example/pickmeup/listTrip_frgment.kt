@@ -40,7 +40,7 @@ class listTrip_frgment : Fragment() {
         listrtip.add(Trip("Washington","ohaio"))
         listrtip.add(Trip("iwoa","miami"))
 
-        val   adaptet =adapter(listrtip)
+        val   adaptet = context?.let { adapter(it,listrtip) }
         rv?.layoutManager =  LinearLayoutManager(context)
         rv.adapter=adaptet
     }
