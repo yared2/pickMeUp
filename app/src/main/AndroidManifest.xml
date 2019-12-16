@@ -16,7 +16,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".pickmefirstpage"></activity>
         <activity android:name=".fragment_all"></activity>
 
         <activity android:name=".AutoComplete">
@@ -43,10 +42,6 @@
  </intent-filter>
            android:label="@string/title_activity_maps">    
         </activity>
-
-        <activity android:name=".SignUp"></activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Login" />
 
 
     </application>
