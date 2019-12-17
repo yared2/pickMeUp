@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="7dp"
-    android:background="@color/cardview_dark_background"
-    android:fadingEdge="horizontal|vertical"
-    android:foregroundGravity="fill_horizontal|top|left|bottom|clip_horizontal|center|fill_vertical"
-    tools:context=".PostAride">
+    android:orientation="vertical"
+    tools:context=".AutoComplete"
+    android:background="@color/cardview_dark_background">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="42dp"
@@ -20,6 +17,7 @@
         android:textColor="@android:color/white"
         android:textSize="24sp"
         android:textStyle="bold|italic" />
+
 
     <TableLayout
         android:layout_width="match_parent"
@@ -42,18 +40,11 @@
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
-            <EditText
-                android:layout_width="335dp"
-
-
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="7dp"
-                android:backgroundTint="@android:color/holo_red_light"
-                android:textColor="@android:color/white">
-                <!--                android:layout_width="match_parent"-->
-                android:layout_height="match_parent">
-                android:layout_width="wrap_content"
-            </EditText>
+            <fragment
+                android:id="@+id/fragment_place"
+                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
         </TableRow>
 
         <TableRow
@@ -71,15 +62,12 @@
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
-            <EditText
-                android:backgroundTint="@android:color/holo_red_light"
-                android:textColor="@android:color/white">
-
-                android:layout_width="335dp"
+            <fragment
+                android:id="@+id/fragment_place2"
+                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="7dp">
-
-            </EditText>
+                />
         </TableRow>
 
         <TableRow
@@ -97,18 +85,11 @@
                 android:textColor="@android:color/white" />
 
             <EditText
-
                 android:backgroundTint="@android:color/holo_red_light"
-                android:textColor="@android:color/white">
+                android:textColor="@android:color/white"
                 android:layout_width="335dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="7dp">
-                android:hint="Underline color change"
-                android:backgroundTint="@android:color/holo_red_light" />
-                <!--                android:layout_width="match_parent"-->
-                android:layout_height="match_parent">
-                android:layout_width="wrap_content"
-            </EditText>
+                android:layout_height="wrap_content"/>
+
         </TableRow>
 
         <TableRow
@@ -233,6 +214,18 @@
                 android:text="Post Ride"
                 android:textColor="@android:color/white" />
         </TableRow>
+
     </TableLayout>
 
-</FrameLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtView"
+        android:clickable="true"
+        android:onClick="viewRides"
+        android:text="View Available rides"/>
+</LinearLayout>

@@ -38,6 +38,13 @@ class Login : AppCompatActivity() {
         loginButton.setOnClickListener {
 
             val intent = Intent(this,fragment_all::class.java)
+            intent.putExtra("type",editFirstname.text.toString())
+            if (editFirstname.text.toString()=="driver"){
+                val intent2 = Intent(this,AutoComplete::class.java)
+                startActivity(intent2)
+            }
+
+                else
             startActivity(intent)
 //            Toast.makeText(applicationContext, "Clicked Login", Toast.LENGTH_SHORT).show()
         }
