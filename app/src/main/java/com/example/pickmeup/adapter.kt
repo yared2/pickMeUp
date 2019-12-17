@@ -42,7 +42,7 @@ class adapter (var context:Context,val tipslist:ArrayList<Trip>) : RecyclerView.
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val v = LayoutInflater.from(parent?.context).inflate(R.layout.trip_layout, parent, false)
-        return MyViewHolder(v);
+        return MyViewHolder(v)
     }
 //    override fun onBindViewHolder(holder: Holder?, position: Int) {
 //        var item : MyObject = objects[position]
